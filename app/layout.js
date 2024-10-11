@@ -1,5 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import Header from "@/components/Header";
+import { Toaster } from "sonner";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -21,7 +23,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        {/* buraya yazdigin her sey tum pagelerde gozukuyo mantigini anliyosun zaten , ilk index.html'i olusturan yer burasi*/}
         {children}
+        <Toaster richColors position="top-right" />
       </body>
     </html>
   );

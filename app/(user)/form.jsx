@@ -40,7 +40,7 @@ export default function ShortUrlForm() {
       <ul>
         {urls.length > 0 &&
           urls.map((url) => (
-            <li>
+            <li key={url.short}>
               <Link href={url.long}>{url.short}</Link>
             </li>
           ))}
